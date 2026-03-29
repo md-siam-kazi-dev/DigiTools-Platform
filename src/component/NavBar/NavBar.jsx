@@ -77,7 +77,7 @@ const NavBar = () => {
           </div>
 
           <a>Login</a>
-          <a className="btn btn-primary rounded-full">Get Stated</a>
+          <a className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white  rounded-full">Get Stated</a>
         </div>
         </div>
       </div>

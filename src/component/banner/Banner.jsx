@@ -1,3 +1,5 @@
+import { Play } from "lucide-react";
+
 const Banner = () => {
   return (
     <div className="container-div mt-8 md:mt-12 lg:mt-15 xl:mt-20 items-center flex flex-col lg:flex-row justify-between">
@@ -21,6 +23,14 @@ const Banner = () => {
           software—all in one place. Start creating faster today. Explore
           Products
         </p>
+
+        <div className="banner-btn flex gap-1 justify-center mx-auto sm:ml-0 w-fit  ">
+            <button className="btn   font-semibold rounded-full    bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white">Explore Products</button>
+
+
+            <button className="btn text-[#4F39F6] border-2 border-[#4F39F6] rounded-full "><Play />Watch Demo</button>
+        </div>
+
       </div>
 
 
