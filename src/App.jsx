@@ -3,20 +3,28 @@ import NavBar from "./component/NavBar/NavBar";
 import Banner from "./component/banner/Banner";
 import Status from "./component/banner/status";
 import Product from "./component/productCard/Product";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Pricing from "./component/pricing/Pricing";
 
 function App() {
-  
-  const fetchData = fetch('/data/card.json').then(res=>res.json());
-  
+  const [cartData, setCartData] = useState([]);
+
+  const loadData = async()=>{
+    const response = await fetch('/data/card.json');
+    const data = await response.json();
+    return data;
+  }
+  let fetchData =  loadData();
   return (
     <>
-      <NavBar />
+      <NavBar cartData={cartData} />
       <Banner />
       <Status />
-      <Product fetchData={fetchData}/>
-
+      <Product
+         fetchData={fetchData}
+         cartData={cartData}
+         setCartData = {setCartData}
+      />
 
       <Pricing />
     </>

@@ -1,7 +1,13 @@
-import React, { Suspense, use } from 'react'
+import React, { Suspense, use, useState } from 'react'
 import ProductContainer from './product-container'
+import Cart from './Cart';
 
-const Product = ({ fetchData }) => {
+const Product = ({ fetchData,cartData,setCartData}) => {
+    const [selected,setSelected] = useState('product');
+
+    const renderContainer = (tab) =>{
+        setSelected(tab);
+    }
     
     return (
         <>
@@ -11,14 +17,14 @@ const Product = ({ fetchData }) => {
 
 
                 <div className="product-tab-btn">
-                    <button className='slc-btn'>Products</button>
+                    <button className={selected === 'product' ? "slc-btn":"non-slc-btn"} onClick={() => renderContainer('product')}>Products</button>
 
-                    <button className='non-slc-btn'>Cart (0)</button>
+                    <button className={selected === 'cart' ? "slc-btn":"non-slc-btn"}  onClick={() => renderContainer('cart')}>Cart ({cartData.length})</button>
                 </div>
             </div>
-            <Suspense fallback={<>Loading</>}>
-              <ProductContainer data={fetchData}></ProductContainer>
-            </Suspense>
+            {selected === 'product'?
+              <ProductContainer cartData={cartData} setCartData={setCartData} data={fetchData}></ProductContainer>
+            :<Cart />}
 
 
             

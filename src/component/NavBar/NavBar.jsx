@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 
-const NavBar = () => {
+const NavBar = ({cartData}) => {
   return (
     <>
       <div className="navbar bg-base-100 shadow-sm">
@@ -72,7 +72,7 @@ const NavBar = () => {
         </div>
         <div className="navbar-end gap-3 sm:gap-6 font-semibold">
           <div className="indicator">
-            <span className="indicator-item h-5 w-5 bg-red-600 rounded-full p-1  indicator-top indicator-end badge badge-secondary">5</span>
+            <span className="indicator-item h-5 w-5 bg-red-600 rounded-full p-1  indicator-top indicator-end badge badge-secondary">{cartData.length}</span>
             <ShoppingCart />
           </div>
 

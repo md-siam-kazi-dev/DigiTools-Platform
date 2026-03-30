@@ -1,8 +1,13 @@
 import { CheckIcon } from "lucide-react";
 import { use } from "react";
 
-const ProductContainer = ({ data }) => {
-  let products = use(data);
+const ProductContainer = ({ data ,cartData ,setCartData}) => {
+   
+  let products = data;
+  console.log(products);
+  const addToCart = (productInfo)=>{
+    setCartData([...cartData,productInfo]);
+  }
   return (
     <div className="container-div grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 mt-10">
       {products.map((product) => {
@@ -48,10 +53,10 @@ const ProductContainer = ({ data }) => {
                 </ul>
 
                 
-                <button className="product-btn">
+                <button className="product-btn" onClick={() => addToCart(data)}>
                   Buy Now
-                </button>
-              </div>
+                </button> 
+              </div> 
             
          
         );
