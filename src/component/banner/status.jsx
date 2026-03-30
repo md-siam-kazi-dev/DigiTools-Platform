@@ -4,7 +4,7 @@ const Status = () => {
   return (
     <div className="w-full mt-15 mb-10 sm:mt-15 sm:mb-20  lin-col text-center flex py-15">
 
-        <div className="container-div flex justify-between flex-col gap-8 sm:gap-0  sm:flex-row items-center">
+        <div className="container-div flex justify-evenly flex-col gap-8 sm:gap-0  sm:flex-row items-center">
             <div>
             <h1 className="status-h1">50K+</h1>
             <p className="status-p">Active Users</p>

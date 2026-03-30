@@ -35,4 +35,44 @@
   .status-p{
     @apply  font-medium text-2xl  mt-2 text-white; 
   }
+
+
+
+  .product-h1{
+    @apply font-extrabold text-5xl sm:text-4xl mb-4;
+  }
+  .product-p{
+    @apply text-[16px] leading-5 text-[#627382] mb-4 w-16/20 sm:w-14/20 lg:w-6/20 mx-auto;
+  }
+
+  .product-tab-btn{
+    @apply  border w-fit mx-auto rounded-full px-1 py-0.5 border-[#ddd];
+  }
+
+  /* toggling btn css  */
+  .slc-btn{
+    @apply btn rounded-full   bg-[#4F39F6] text-white w-[120px] text-[16px] h-[50px];
+  }
+  .non-slc-btn{
+    @apply text-black font-semibold w-[120px] h-[50px]  bg-transparent rounded-full bg-white;
+  }
+
+
+  /* card css  */
+  .product-h{
+    @apply text-xl font-bold text-gray-900 mb-1
+  }
+  .product-badge{
+    @apply absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full ;
+  }
+  .product-btn{
+    @apply bg-[#4F39F6] w-full rounded-full text-white font-semibold text-sm py-3 ;
+  }
+  .product-des{
+    @apply text-sm text-gray-500 leading-relaxed mb-5;
+  }
+  .product-price{
+    @apply text-3xl font-bold text-gray-900;
+  }
+
 }
