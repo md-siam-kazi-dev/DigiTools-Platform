@@ -8,13 +8,20 @@ import Pricing from "./component/pricing/Pricing";
 
 function App() {
   const [cartData, setCartData] = useState([]);
+  const [fetchData,setFetchData] = useState([]);
+
+
 
   const loadData = async()=>{
     const response = await fetch('/data/card.json');
     const data = await response.json();
-    return data;
+    setFetchData(data);
   }
-  let fetchData =  loadData();
+
+//  fetch data and set it to fetchData 
+  loadData();
+
+
   return (
     <>
       <NavBar cartData={cartData} />
