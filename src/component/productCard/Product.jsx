@@ -1,4 +1,4 @@
-import React, { Suspense, use, useState } from 'react'
+import { useState } from 'react'
 import ProductContainer from './product-container'
 import Cart from './Cart';
 

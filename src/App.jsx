@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Pricing from "./component/pricing/Pricing";
 import { ToastContainer } from "react-toastify";
 import GetStart from "./component/GetStartSection/GetStart";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   const [cartData, setCartData] = useState([]);
@@ -37,6 +38,8 @@ function App() {
       <GetStart />
 
       <Pricing />
+
+      <Footer />
     </>
   );
 }

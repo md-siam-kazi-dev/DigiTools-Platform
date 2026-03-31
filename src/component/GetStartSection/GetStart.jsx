@@ -32,7 +32,7 @@ const GetStart = () => {
       <div className="card-container mt-10 grid-cols-1 gap-4 grid md:grid-cols-3">
         {steps.map(step => {
             return (
-                <>
+               
                   <div key={step.id} className="rounded-xl gap-4 items-center shadow-md border-[#dddddd5f] w-[340px] mx-auto md:w-full relative  border flex-col flex justify-center  py-20 px-4">
                     <div className="p-3 w-fit h-fit rounded-full bg-blue-200">
                         <img src={step.icon}></img>
@@ -41,7 +41,7 @@ const GetStart = () => {
                     <h1 className="font-bold text-2xl">{step.title}</h1>
                     <p className="text-gray-400 ">{step.description}</p>
                   </div>
-                </>
+                
             )
         })}
       </div>
