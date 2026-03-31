@@ -16,7 +16,7 @@ const Product = ({ fetchData,cartData,setCartData}) => {
                 <p className='product-p'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
 
 
-                <div className="product-tab-btn">
+                <div className="product-tab-btn ">
                     <button className={selected === 'product' ? "slc-btn":"non-slc-btn"} onClick={() => renderContainer('product')}>Products</button>
 
                     <button className={selected === 'cart' ? "slc-btn":"non-slc-btn"}  onClick={() => renderContainer('cart')}>Cart ({cartData.length})</button>
@@ -24,7 +24,7 @@ const Product = ({ fetchData,cartData,setCartData}) => {
             </div>
             {selected === 'product'?
               <ProductContainer cartData={cartData} setCartData={setCartData} data={fetchData}></ProductContainer>
-            :<Cart />}
+            :<Cart cartData = {cartData} setCartData={setCartData}/>}
 
 
             
