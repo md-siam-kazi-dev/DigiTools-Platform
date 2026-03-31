@@ -8,6 +8,7 @@ const ProductContainer = ({ data ,cartData ,setCartData}) => {
    
   let products = data;
   
+//   add to cart  implention 
   const addToCart = (productInfo)=>{
 
     const productExist = cartData.some(cartItem => cartItem.id === productInfo.id);

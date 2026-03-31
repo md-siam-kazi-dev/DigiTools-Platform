@@ -1,4 +1,5 @@
 import { ShoppingCart, ShoppingCartIcon } from "lucide-react";
+import { toast } from "react-toastify";
 
 const Cart = ({ cartData, setCartData }) => {
   let total = 0;
@@ -6,9 +7,11 @@ const Cart = ({ cartData, setCartData }) => {
   const removeItem = (data) => {
     let temp = cartData.filter((x) => x.id != data.id);
     setCartData(temp);
+    toast(`${data.title} remove from the cart`)
   };
 
   const checkout = () => {
+    toast("Proceed To checkout Succesfully")
     setCartData([]);
   };
 

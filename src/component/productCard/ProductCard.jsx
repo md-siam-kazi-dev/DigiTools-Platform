@@ -5,6 +5,8 @@ const ProductCard = ({product,addToCart}) => {
    const [loadBtn, setLoadBtn] = useState('');
 
    const btnFun = () =>{
+
+    // btn animation implentaion 
     const btnText = addToCart(product);
      setLoadBtn(btnText);
      setTimeout(() => {
@@ -36,7 +38,7 @@ const ProductCard = ({product,addToCart}) => {
 
                 <div className="flex items-baseline gap-1 mb-5">
                   <span className="product-price">
-                    {product.price}
+                    ${product.price}
                   </span>
                   <span className="text-sm text-gray-400 font-medium">/Mo</span>
                 </div>

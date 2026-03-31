@@ -6,6 +6,7 @@ import Product from "./component/productCard/Product";
 import { useEffect, useState } from "react";
 import Pricing from "./component/pricing/Pricing";
 import { ToastContainer } from "react-toastify";
+import GetStart from "./component/GetStartSection/GetStart";
 
 function App() {
   const [cartData, setCartData] = useState([]);
@@ -32,6 +33,8 @@ function App() {
         cartData={cartData}
         setCartData={setCartData}
       />
+
+      <GetStart />
 
       <Pricing />
     </>
