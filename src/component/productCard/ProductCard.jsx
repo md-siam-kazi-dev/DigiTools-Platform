@@ -16,7 +16,7 @@ const ProductCard = ({product,addToCart}) => {
 
   return (
     <div key={product.id} className="product-card-div">
-                {/* Best Seller Badge */}
+               
                 <span className={`product-badge ${product.tagColor}`}>
                   {product.tag}
                 </span>
@@ -43,7 +43,7 @@ const ProductCard = ({product,addToCart}) => {
                   <span className="text-sm text-gray-400 font-medium">/Mo</span>
                 </div>
 
-                {/* Features */}
+               
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature) => (
                     <li

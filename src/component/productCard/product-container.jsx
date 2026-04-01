@@ -18,6 +18,7 @@ const ProductContainer = ({ data ,cartData ,setCartData}) => {
     }else{
         setCartData([...cartData,productInfo]);
     toast(`${productInfo.title} Added To Cart`)
+        
          return "Added To Cart";
     }
     
