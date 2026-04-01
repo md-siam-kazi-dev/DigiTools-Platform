@@ -2,7 +2,7 @@ import { Play } from "lucide-react";
 
 const Banner = () => {
   return (
-    <div className="container-div mt-8 md:mt-12 lg:mt-15 xl:mt-20 items-center flex flex-col lg:flex-row gap-5 lg:gap-0  justify-between">
+    <div className="container-div mt-20 md:mt-30  items-center flex flex-col lg:flex-row gap-5 lg:gap-0  justify-between">
 
 
         {/* banner-left/top side  */}
